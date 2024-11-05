@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://innova.pe/public_images/ico-logo-innova.ico" type="image/x-icon"/>
+    <title>Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="files/css/style.css">
+</head>
+<body>
+    <div>
+        <section id="header">
+            <div class="container">
+                <div class="espacio ">
+                    <div class="row d-flex align-items-center mt-2">
+                        <div class="col">
+                            <div class="pt-2">
+                                <img src="https://hbt.gob.pe/images/libro-reclamaciones.png" alt="" width="70px" class="bg-white rounded pb-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <section id="login">
+            <div class="container">
+                <div class="espacio_login">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <div id="contenedor_login" class="shadow rounded rounded-3 p-4">
+                                <div class="mb-3 text-center">
+                                    <!-- <img src="https://www.clipartmax.com/png/middle/51-514952_user-login-icon-by-aha-soft-user-login-icon.png" alt="" width="50pz"> -->
+                                </div>
+                                <div class="mb-3">
+                                    <label for="usuario_login" class="form-label">Usuario</label>
+                                    <input type="text" class="form-control" id="usuario_login">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password_login" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="password_login">
+                                </div>
+                                <div class="text-center">
+                                    <span id="btn_login" type="button" class="btn" onclick="login();">Ingresar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="files/js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

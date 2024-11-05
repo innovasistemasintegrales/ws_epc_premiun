@@ -2,43 +2,205 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="ico/icono.ico" type="image/x-icon" />
-    <!-- BOOSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/files/css/styles.css" />
-    <!-- ICONOS, DATA AOS, ANIMATE CSS -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
-        integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- slider auto -->
-    <link rel="stylesheet" href="/files/css/flickity.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link rel="icon" href="/files/images/logoInnova.png" type="image/x-icon"/>
+    <title>especialista</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="files/css/style.css">
 </head>
 <body>
     <div>
         <section id="header">
-
-        </section>
-        <section id="inicio">
             <div class="container">
-                <span>Hola Innova</span>
+                <div class="row d-flex align-items-center mt-2">
+                    <div class="col">
+                        <div>
+                            <img src="/files/images/logo-mi-negocio.png" alt="" width="120px" class="rounded">
+                        </div>
+                    </div>
+                    <div class="col text-end d-none d-lg-block d-md-block d-sm-none mt-2">
+                        <a href="https://tiendademo.innova.pe/" class="btn-tienda" target="_blank">Tienda Virtual</a>
+                        <a href="" class="btn-facturacion" data-bs-toggle="modal" data-bs-target="#modalInnovaNegocios">Facturación Electrónica</a>
+                    </div>
+                    <div class="col pt-2 pb-2 text-end d-lg-none d-md-none d-sm-block">
+                        <a class="btn-tienda"><i class="bi bi-cart3"></i></a>
+                        <a class="btn-facturacion"><i class="bi bi-pc-display"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalInnovaNegocios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Acceso a Innova Negocios</h5>
+                        <button type="  button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <span>
+                        Estas a punto de ingresar al sistema de 
+                        facturación electrónica y control de 
+                        inventarios <b>INNOVA NEGOCIOS.</b></br>
+                        <b>Usuario: </b>ventas</br>
+                        <b>Contraseña:</b> 1234
+                    </span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="https://innovanegocios.pe/test/" class="btn btn-sm btn-primary" target="_blank">Continuar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="body">
+            <section id="inicio">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <img src="/files/images/inicio.jpeg" alt="" width="100%">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+
+            <section id="nosotros">
+                <div class="container">
+                    
+                    <div id="quienesSomos" class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <span class="fw-bold">QUIENES SOMOS</span>
+                            <p class="parrafo">
+                                Somos una empresa de tecnología integral dedicada a 
+                                ofrecer soluciones y herramientas informáticas, 
+                                administrativas y contables que optimizan la rentabilidad, 
+                                eficacia y eficiencia de los procesos de nuestros clientes.
+                            </p>
+                            <p class="parrafo">
+                                Desarrollamos sistemas y aplicaciones diseñados para el 
+                                registro de operaciones de empresas como comercios en general, 
+                                importadoras, restaurantes, clínicas estéticas, hoteles, saunas, 
+                                entre otros. Todos nuestros sistemas cuentan con una integración 
+                                opcional con nuestro sistema general de Facturación Electrónica, 
+                                validado por SUNAT.
+                            </p>
+                            <p class="parrafo">
+                                Nos comprometemos con el futuro, sin descuidar la importancia del presente. 
+                                Creemos en la innovación y la mejora continua, brindando lo mejor en cada proyecto.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 d-none d-lg-block d-md-block d-sm-none">
+                            <div>
+                                <img src="/files/images/nosotros.jpeg" alt="" width="100%" height="320px">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="visionMision" class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div>
+                                <img src="/files/images/vision-mision.jpeg" alt="" width="100%" height="350px">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <span class="fw-bold">MISIÓN</span>
+                            <p class="parrafo">
+                                Nos dedicamos a proporcionar soluciones y herramientas tecnológicas 
+                                que optimizan los procesos administrativos, contables y operativos 
+                                de nuestros clientes. A través de un enfoque innovador y un profundo 
+                                conocimiento del sector. Desarrollamos sistemas y aplicaciones que 
+                                garantizan la alta rentabilidad, eficiencia y eficacia de las empresas, 
+                                siempre alineados con los estándares de calidad y las normativas vigentes.
+                            </p>
+                            <span class="fw-bold">VISIÓN</span>
+                            <p class="parrafo">
+                                Convertirnos en la empresa líder a nivel nacional dentro de 6 años en 
+                                soluciones tecnológicas integrales, reconocida por nuestra innovación, 
+                                excelencia en servicio al cliente y compromiso con la eficiencia. 
+                                Buscamos ser el referente de confianza para nuestros clientes y la sociedad, 
+                                impulsando el progreso de empresas en todos los sectores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="footer">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col col-12 col-lg-6 text-center">
+                                <img src="/files/images/logo-mi-negocio.png" alt="" width="150px">
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class=" fw-bold">
+                                    <span>Nuestras redes sociales</span>
+                                </div>
+    
+                                <div class="py-1 pb-4">
+                                    <span class="fs-ico m-2"><a href="#" target="_blank"><i class="bi bi-tiktok"></i></a></span>
+                                    <span class="fs-ico m-2"><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></span>
+                                    <span class="fs-ico m-2"><a href="https://api.whatsapp.com/send/?phone=979018820&text&type=phone_number&app_absent=0" target="_blank"><i class="bi bi-whatsapp"></i></a></span>
+                                    <span class="fs-ico m-2"><a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a></span>
+                                    <!-- <span class="fs-ico m-2"><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></span> -->
+                                </div>
+                                <span class="fw-bold">"Mi Negocio Innova"</span>
+                            </div>
+                        </div>
+                        <hr class="text-black">
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex">
+                                    <span><i class="bi bi-telephone-fill"></i></span>
+                                    <p class="ms-3">(+51) 952322003</p>
+                                </div>
+                                <div class="d-flex">
+                                    <span><i class="bi bi-telephone-fill"></i></span>
+                                    <p class="ms-3">(+51) 930274447</p>
+                                </div>
+                                <div class="d-flex">
+                                    <span><i class="bi bi-telephone-fill"></i></span>
+                                    <p class="ms-3">(+51) 977738017</p>
+                                </div>
+                                <div class="d-flex">
+                                    <span><i class="bi bi-geo-alt-fill"></i></span>
+                                    <p class="ms-3">Calle Tumbes, Z-1, Rio Seco Cerro Colorado - Arequipa</p>
+                                </div>
+                                <hr class="text-black">
+                                <div class="text-center">
+                                    <a href="/libro.html" class="icono-libro">
+                                        <img src="/files/images/libroReclamaciones-black.png" alt="" width="100px">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="border border-2">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.4603342918076!2d-71.57399122379786!3d-16.35049623689634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x914249c5bc7c0b7d%3A0xab8065fc60a02100!2sInnova%20Sistemas%20Integrales%20S.A.C.!5e0!3m2!1ses-419!2spe!4v1728321529205!5m2!1ses-419!2spe" width="100%" height="350" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-black fw-bold">
+                <div class="row text-center">
+                    <div class="col">
+                        <span>© 2024 Mi Negocio Innova</span>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
-    <!-- SCRIPT -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="/files/js/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/files/js/flickity.pkgd.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="files/js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

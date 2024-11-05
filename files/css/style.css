@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Monda', sans-serif;
+}
+:root{
+    --color-primario: #EFF1F5;
+    --color-secundario: #00D64B;
+    --borde-boton: 7px
+}
+
+#header{
+    /* background: #3E5FC9; */
+    background: var(--color-primario);
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    color: #FFFFFF;
+}
+
+
+#empresa{
+    padding-top: 60px;
+}
+
+.btn-tienda{
+    background: var(--color-secundario);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--borde-boton);
+    color: #000000;
+}
+
+.btn-facturacion{
+    background: var(--color-secundario);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--borde-boton);
+    color: #000000;
+}
+.btn-enviar{
+    background: var(--color-secundario);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--borde-boton);
+    color: #000000;
+    cursor: pointer;
+}
+.btn-enviar:hover{
+    background: #607D8B;
+    color: var(--color-secundario);
+}
+
+hr{
+    color: #3E5FC9;
+}
+
+body{
+    background: #FFFFFF;
+}
+
+/* nosotros  */
+
+.parrafo{
+    text-align: justify;
+}
+
+#descripcion{
+    background: #E2EAFC;
+    border-radius: 5px;
+    border-color: solid #3E5FC9;
+    border-top: 1px solid #3E5FC9;
+    border-right: 1px solid #3E5FC9;
+    border-bottom: 1px solid #3E5FC9;
+    border-left: 1px solid #3E5FC9;
+}
+
+#footer{
+    background: var(--color-primario);
+    color: #000000;
+    
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover{
+    color: #565353;
+}
+
+/* Estilos para administrador */
+#color_estado{
+    width: 40px;
+}
+
+/* Estilos para login */
+
+#login{
+    padding-top: 50px;
+    height: calc(100vh - 60px);
+}
+#contenedor_login{
+    background: #E2EAFC;
+}
+.espacio_login{
+    padding-top: 10%;
+}
+#btn_login{
+    background: #038C5A;
+    color: #ffffff;
+}
+#btn_login:hover{
+    background: #1C894A;
+    color: #EFF1F5;
+}

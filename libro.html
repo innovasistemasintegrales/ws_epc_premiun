@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" type="image/x-icon"/>
+    <title>Libro de reclamaciones</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="files/css/style.css">
+</head>
+<body>
+    <div>
+        <form action="enviar.php" name="enviar" method="POST">
+            <section id="header">
+                <div class="container">
+                    <div class="espacio">
+                        <div class="row d-flex align-items-center mt-2">
+                            <div class="col">
+                                <div>
+                                    <img src="/files/images/logo-mi-negocio.png" alt="" width="120px" class="rounded">
+                                </div>
+                            </div>
+                            <div class="col pt-2 text-end">
+                                <span><a href="login.html" class="btn-tienda"><i class="bi bi-person-fill"></i></a></span>
+                                <span><a href="/index.html" class="btn-facturacion"><i class="bi bi-box-arrow-left"></i>&nbsp SALIR</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="empresa">
+                <div class="container">
+                    <div class="espacio py-3 px-2">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 text-center">
+                                <u><h2 id="titulo" class="fw-bold">LIBRO DE RECLAMACIONES</h2></u>
+                                <div id="fecha" class="mb-3 fw-bold">
+                                </div>
+                                
+                                <h5 class="fw-bold">MI NEGOCIO INNOVA S.A.C.</h5>
+                                <p>RUC: 20000000001</p>
+                                <p>CAL.TUMBES MZA. Z LOTE. 1 P.J. RIO SECO ZONA A AREQUIPA / AREQUIPA / CERRO COLORADO</p>
+                                <hr>
+
+                                <img src="/files/images/libroReclamaciones-black.png" alt="" width="85px">
+                                <p>(Ley: 29571) <br>DS 101-2022-PCM</p>
+                                <p>
+                                    Conforme a lo establecido en el código de la Protección y 
+                                    Defensa del consumidor, este establecimiento cuenta con un 
+                                    Libro de Reclamaciones virtual a tu disposición. Registra la queja o reclamo aquí.
+                                </p>
+                                <P>
+                                    Le recordamos que este canal de comunicación es exclusivo para Reclamos y Quejas, 
+                                    de prsentar un requerimiento distinto y no cumpla con esta naturaleza NO serán atendidos.
+                                </P>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="consumidor">
+                <div class="container">
+                    <div class="espacio py-3 px-2">
+                        <div class="row justify-content-center">
+                            <div class="d-flex justify-content-center">
+                                <h5 class="text-center">Orden N°: 000 <span id="orden"></span> </h5>
+                            </div>
+                            <div class="form-check form-switch" visibility: hidden>
+                                <input class="form-check-input" type="checkbox" id="estado" >
+                            </div> 
+                            <h4 class="text-center fw-bold py-2">DATOS DEL CONSUMIDOR</h4>
+                            <div class="col-lg-5 col-md-6 col-sm-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="tipo_doc" name="tipo_doc" aria-label="Floating label select example">
+                                      <option selected>--Seleccione--</option>
+                                      <option value="RUC">RUC</option>
+                                      <option value="DNI">DNI</option>
+                                      <option value="Carné de estranjería">Carné de estranjería</option>
+                                    </select>
+                                    <label for="tipo_doc">Seleccione tipo de documento</label>
+                                </div>
+                                <br>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="rs_nombre" name="rs_nombre" placeholder="name@example.com">
+                                    <label for="rs_nombre">Razón social / Nombre</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="num_documento" name="num_documento" placeholder="name@example.com">
+                                    <label for="num_documento">Número de documento</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="correo" name="correo" placeholder="name@example.com">
+                                    <label for="correo">Correo electrónico</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="celular" name="celular" placeholder="name@example.com">
+                                    <label for="celular">Celular/Teléfono</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-6 col-sm-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="departamento" name="departamento" placeholder="name@example.com">
+                                    <label for="departamento">Departamento</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="provincia" name="provincia" placeholder="name@example.com">
+                                    <label for="provincia">Provincia</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="distrito" name="distrito" placeholder="name@example.com">
+                                    <label for="distrito">Distrito</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="name@example.com">
+                                    <label for="direccion">Dirección</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="producto">
+                <div class="container">
+                    <div class="espacio py-3 px-2">
+                        <div class="row justify-content-center">
+                            <h4 class="text-center fw-bold py-2">DETALLE DEL PRODUCTO O SERVICIO</h4>
+                            <div class="col-lg-5 col-md-6 col-sm-12">
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control" id="fecha_atencion" name="fecha_atencion" placeholder="name@example.com">
+                                    <label for="fecha_atencion">Fecha de Reclamo/Queja</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select" id="canal_atencion" name="canal_atencion" aria-label="Floating label select example">
+                                      <option selected>--Seleccione--</option>
+                                      <option value="Página web">Página web</option>
+                                      <option value="Llamada telefónica">Llamada telefónica</option>
+                                      <option value="Tienda física">Tienda física</option>
+                                    </select>
+                                    <label for="canal_atencion">Canal de atención</label>
+                                </div>
+                                <br>
+                                <div class="form-floating">
+                                    <select class="form-select" id="lbx_tipo_bien" name="lbx_tipo_bien" aria-label="Floating label select example">
+                                      <option selected>--Seleccione--</option>
+                                      <option value="Servicio" class="opcion">Servicio</option>
+                                      <option value="Producto" class="opcion">Producto</option>
+                                    </select>
+                                    <label for="lbx_tipo_bien">Tipo de bien</label>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="col-lg-5 col-md-6 col-sm-12">
+                                <div id="detalles_tipo">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="nombre_bien" placeholder="name@example.com">
+                                        <label for="nombre_bien">Nombre del Producto/Servicio</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="precio" placeholder="name@example.com">
+                                        <label for="precio">Precio del Producto/Servicio</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a comment here" id="desc_producto" name="desc_producto"></textarea>
+                                        <label for="desc_producto">Descripción del Producto/Servicio</label>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="reclamo">
+                <div class="container">
+                    <div class="espacio py-3 px-2">
+                        <div class="row justify-content-center">
+                            <h4 class="text-center fw-bold py-2">DETALLE DE RECLAMACIÓN DEL CONSUMIDOR</h4>
+                            <div class="col-lg-10">
+                                <div id="descripcion">
+                                    <p class="p-3">
+                                        <strong>Reclamo:</strong> Disconformidad relacionada directamente con los productos o servicios adquiridos. <br>
+                                        <strong>Queja:</strong> Malestar o descontento no relacionado a los productos o servicios.
+                                    </p>
+                                </div>
+                                <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="tipo_incidente" name="tipo_incidente" aria-label="Floating label select example">
+                                              <option selected>--Seleccione--</option>
+                                              <option value="Reclamo">Reclamo</option>
+                                              <option value="Queja">Queja</option>
+                                            </select>
+                                            <label for="tipo_incidente">Tipo de incidente</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="detalles" name="detalles" style="height: 100px"></textarea>
+                                    <label for="detalles">Detalles de reclamo o queja</label>
+                                </div>
+                                <br>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="pedido" name="pedido" style="height: 100px"></textarea>
+                                    <label for="pedido">Pedido del consumidor</label>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center pb-5">
+                                <span id="btn_enviar" class="btn-enviar" onclick="guardarReclamo()">Enviar reclamo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="footer">
+                <div class="container">
+                    <div class="espacio">
+                        <div class="row">
+                            <div class="col text-center py-3">
+                                <span><a id="copyright" href="https://innova.pe/" target="_blank">© MI NEGOCIO INNOVA.</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="files/js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        numOrden();
+        fecha();
+    </script>
+
+</body>
+</html>
