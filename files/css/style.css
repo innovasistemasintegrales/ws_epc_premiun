@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Monda', sans-serif;
+}
+
+:root {
+    --color-primario: #EFF1F5;
+    --color-secundario: #fe0000;
+    --color-terciario: #25427e;
+    --borde-boton: 7px
+}
+
+#header {
+    /* background: #3E5FC9; */
+    background: var(--color-primario);
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    color: #FFFFFF;
+    margin-top: -60px;
+}
+
+.content-relative {
+    position: relative;
+}
+
+.resumen {
+    position: relative;
+    z-index: 9;
+    margin-top: -50px;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+    width: 80%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+
+}
+
+
+.card-resumen p {
+    margin-bottom: 0;
+}
+
+.card-resumen .num-resumen {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+
+#empresa {
+    padding-top: 60px;
+}
+
+.btn-tienda {
+    background: var(--color-secundario);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--borde-boton);
+    color: #000000;
+}
+
+.btn-facturacion {
+    background: var(--color-secundario);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--borde-boton);
+    color: #000000;
+}
+
+.btn-enviar {
+    background: var(--color-secundario);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--borde-boton);
+    color: #000000;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background: #607D8B;
+    color: var(--color-secundario);
+}
+
+hr {
+    color: #3E5FC9;
+}
+
+body {
+    background: #FFFFFF;
+}
+
+/* Hero Section */
+#inicio {
+    margin-top: 60px;
+}
+
+/* nosotros  */
+
+.parrafo {
+    text-align: justify;
+}
+
+#descripcion {
+    background: #E2EAFC;
+    border-radius: 5px;
+    border-color: solid #3E5FC9;
+    border-top: 1px solid #3E5FC9;
+    border-right: 1px solid #3E5FC9;
+    border-bottom: 1px solid #3E5FC9;
+    border-left: 1px solid #3E5FC9;
+}
+
+#footer {
+    background: var(--color-primario);
+    color: #000000;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #565353;
+}
+
+/* Estilos para administrador */
+#color_estado {
+    width: 40px;
+}
+
+/* Estilos para login */
+
+#login {
+    padding-top: 50px;
+    height: calc(100vh - 60px);
+}
+
+#contenedor_login {
+    background: #E2EAFC;
+}
+
+.espacio_login {
+    padding-top: 10%;
+}
+
+#btn_login {
+    background: #038C5A;
+    color: #ffffff;
+}
+
+#btn_login:hover {
+    background: #1C894A;
+    color: #EFF1F5;
+}
+
+
+
+
+
+
+
+/*? Header */
+.carousel-header {
+    background: #EEE;
+}
+
+.carousel-header .carousel-cell {
+    /* width: auto;
+    height: auto; */
+    margin-right: 10px;
+    background: rgb(51, 80, 136);
+    border-radius: 5px;
+}
+
+/*? Sección Principales Productos */
+.contenedor-productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    text-align: center;
+}
+
+.product-card .image-container {
+    position: relative;
+}
+
+.product-card .image-container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/*? Sección Principales Clientes */
+.carousel-clientes {
+    background: #EEE;
+}
+
+.carousel-clientes .carousel-cell {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    background: #622f2f;
+    border-radius: 5px;
+}
+
+/*? Sección Principales Proveedores */
+.carousel-proveedores {
+    background: #EEE;
+}
+
+.carousel-proveedores .carousel-cell {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    background: #293f68;
+    border-radius: 5px;
+}

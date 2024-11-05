@@ -1,0 +1,4 @@
+colección: usuarios
+id: por defecto
+usuario: root
+password: root123
