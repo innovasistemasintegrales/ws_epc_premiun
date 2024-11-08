@@ -9,7 +9,6 @@
 :root {
     --color-primario: #EFF1F5;
     --color-secundario: #fe0000;
-    --color-terciario: #fe0000;
     --color-oscuro: #222;
     --borde-boton: 7px
 }
@@ -66,8 +65,8 @@
 }
 
 .btn-enviar:hover {
-    background: #607D8B;
-    color: var(--color-secundario);
+    background: #ff3200;
+    color: white;
 }
 
 hr {
@@ -221,7 +220,7 @@ a:hover {
 .card-resumen .num-resumen {
     font-size: 2.5rem;
     font-weight: bold;
-    color: var(--color-terciario);
+    color: var(--color-secundario);
 }
 
 @media (max-width: 768px) {
@@ -307,16 +306,12 @@ a:hover {
 }
 
 /*? Sección Principales Proveedores */
-.carousel-proveedores {
-    background: #EEE;
-}
+.carousel-proveedores {}
 
 .carousel-proveedores .carousel-cell {
     width: 200px;
     height: 200px;
     margin-right: 10px;
-    background: #293f68;
-    border-radius: 5px;
 
     display: flex;
     justify-content: center;

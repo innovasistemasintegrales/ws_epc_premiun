@@ -150,9 +150,6 @@ function guardarReclamo() {
         });
     }
 
-
-
-
 }
 
 /* Limpiar tabla */
@@ -406,3 +403,115 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+/* Registro de formulario */
+function registrarMensaje() {
+    let nombreIndex = document.querySelector(".nombre-index");
+    let telefonoIndex = document.querySelector(".telefono-index");
+    let correoIndex = document.querySelector(".correo-index");
+    let ciudadIndex = document.querySelector(".ciudad-index");
+    let mensajeIndex = document.querySelector(".mensaje-index");
+    let expresiones = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    let correoValido = expresiones.test(correoIndex.value);
+
+    if (nombreIndex.value !== "" && telefonoIndex.value !== "" && correoIndex.value !== "" && ciudadIndex.value !== "" && mensajeIndex.value !== "") {
+        if (telefonoIndex.value.length == 9) {
+            if (correoValido) {
+                // Enviar los datos por AJAX
+                $.ajax({
+                    method: "POST",
+                    url: "enviar.php",
+                    data: {
+                        nombre: nombreIndex.value,
+                        telefono: telefonoIndex.value,
+                        correo: correoIndex.value,
+                        ciudad: ciudadIndex.value,
+                        mensaje: mensajeIndex.value
+                    },
+                    success: function (response) {
+                        swal.fire({
+                            icon: "success",
+                            title: "Mensaje enviado correctamente",
+                        });
+                        // Limpiar el formulario
+                        document.getElementById("contactForm").reset();
+                    },
+                    error: function () {
+                        swal.fire({
+                            icon: "error",
+                            title: "Error al enviar mensaje",
+                        });
+                    }
+                });
+
+                // Guardar en Firestore
+                db.collection("mensajes").doc().set({
+                    nombre: nombreIndex.value,
+                    telefono: telefonoIndex.value,
+                    correo: correoIndex.value,
+                    ciudad: ciudadIndex.value,
+                    mensaje: mensajeIndex.value,
+                    fecha: new Date()
+                }).then(() => {
+                    mostrarToast("Mensaje guardado en la base de datos", "bg-success", "text-white", "bottom-0 end-0");
+                }).catch((error) => {
+                    mostrarToast("Error al guardar en la base de datos", "bg-danger",undefined, 8000);
+                });
+
+            } else {
+                mostrarToast("Correo no válido", "bg-dark", "text-white");
+            }
+        } else {
+            mostrarToast("Ingrese un numero valido", "bg-dark", "text-white");
+            console.log(telefonoIndex);
+        }
+    } else {
+        mostrarToast("Todos los campos son obligatorios", "bg-dark", "text-white");
+    }
+
+}
+
+function mostrarToast(mensaje, color = "bg-white", textColor = "text-dark", posicion = "top-50 start-50 translate-middle", duracion = 3000, autohide = true) {
+    // Crear el contenedor del toast si no existe
+    let toastContainer = document.getElementById("dynamicToastContainer");
+    if (!toastContainer) {
+        toastContainer = document.createElement("div");
+        toastContainer.id = "dynamicToastContainer";
+        toastContainer.className = `toast-container position-fixed p-3 ${posicion}`;
+        document.body.appendChild(toastContainer);
+    }
+
+    // Crear el elemento del toast
+    const toastElement = document.createElement("div");
+    toastElement.className = `toast align-items-center ${color}`;
+    toastElement.setAttribute("role", "alert");
+    toastElement.setAttribute("aria-live", "assertive");
+    toastElement.setAttribute("aria-atomic", "true");
+
+    // Añadir el contenido del toast
+    toastElement.innerHTML = `
+        <div class="d-flex ${textColor}">
+            <div class="toast-body">
+                ${mensaje}
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    `;
+
+    // Agregar el toast al contenedor
+    toastContainer.appendChild(toastElement);
+
+    // Inicializar y mostrar el toast con opciones personalizadas
+    const toast = new bootstrap.Toast(toastElement, {
+        delay: duracion,
+        autohide: autohide
+    });
+
+    toast.show();
+
+    // Remover el toast del DOM una vez que se oculta
+    toastElement.addEventListener('hidden.bs.toast', () => {
+        toastElement.remove();
+    });
+}

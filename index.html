@@ -178,7 +178,7 @@
         </div>
       </section>
 
-      <section id="principalesProductos" class="my-5">
+      <!-- <section id="principalesProductos" class="my-5">
         <h2 class="text-center">Nuestros Principales Productos</h2>
         <div class=" container-xl contenedor-productos mt-4">
           <div class="product-card">
@@ -214,7 +214,7 @@
           
         </div>
 
-      </section>
+      </section> -->
 
       <section id="contactanos" class="container my-5">
         <div class="card-contactanos row justify-content-center mx-2 mx-lg-0">
@@ -237,43 +237,39 @@
                       <div class="row gap-3">
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Nombre">
+                            <input type="text" class="form-control nombre-index" placeholder="Nombre">
                           </div>
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="text" class="form-control" name="telf" id="telf" placeholder="Teléfono">
+                            <input type="text" class="form-control telefono-index" placeholder="Teléfono">
                           </div>
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                            <input type="email" class="form-control correo-index" placeholder="Correo">
                           </div>
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="text" class="form-control" name="ciudad" id="ciudad" placeholder="Ciudad">
+                            <input type="text" class="form-control ciudad-index" placeholder="Ciudad">
                           </div>
                         </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto">
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <textarea name="mensaje" class="form-control" id="mensaje" cols="30" rows="4"
+                            <textarea name="mensaje" class="form-control mensaje-index" id="mensaje" cols="30" rows="4"
                               placeholder="Escribe Tu Mensaje Aquí"></textarea>
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <div class="form-group">
-                            <input type="submit" value="Enviar mensaje" class="btn btn-enviar">
-                            <div class="submitting"></div>
+                          <div class="form-group text-center">
+                            <span id="btnEnviarSms" class="btn btn-enviar" onclick="registrarMensaje();">Enviar
+                              mensaje</span>
                           </div>
                         </div>
                       </div>
                     </form>
+                    
                   </div>
                 </div>
                 <div class=" col-lg-6 d-flex align-items-stretch p-4 p-md-5 mt--5 mt-lg-0">
@@ -324,18 +320,21 @@
       <section id="proveedores">
         <h2 class="text-center mb-4">Nuestros Principales Proveedores</h2>
         <div class="carousel-proveedores mb-5">
-          <div class="carousel-cell"><img src="ruta/a/imagen1.jpg" alt="Imagen 1"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen2.jpg" alt="Imagen 2"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen3.jpg" alt="Imagen 3"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen1.jpg" alt="Imagen 4"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen2.jpg" alt="Imagen 5"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen3.jpg" alt="Imagen 6"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen1.jpg" alt="Imagen 7"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen2.jpg" alt="Imagen 8"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen3.jpg" alt="Imagen 9"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen1.jpg" alt="Imagen 10"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen2.jpg" alt="Imagen 11"></div>
-          <div class="carousel-cell"><img src="ruta/a/imagen3.jpg" alt="Imagen 12"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/1.png" alt="Imagen 1"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/2.png" alt="Imagen 2"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/3.png" alt="Imagen 3"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/4.png" alt="Imagen 4"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/5.png" alt="Imagen 5"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/6.png" alt="Imagen 6"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/7.png" alt="Imagen 7"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/8.png" alt="Imagen 8"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/9.png" alt="Imagen 9"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/10.png" alt="Imagen 10"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/11.png" alt="Imagen 11"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/12.png" alt="Imagen 12"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/13.png" alt="Imagen 13"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/14.png" alt="Imagen 14"></div>
+          <div class="carousel-cell"><img src="/files/images/logo proveedores 250x250/15.png" alt="Imagen 15"></div>
         </div>
       </section>
     </section>
@@ -353,13 +352,15 @@
                 </div>
 
                 <div class="py-1 pb-4">
-                  <span class="fs-ico m-2"><a href="https://www.tiktok.com/foryou" rel="noopener noreferrer" target="_blank"><i class="bi bi-tiktok"></i></a></span>
-                  <span class="fs-ico m-2"><a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"><i class="bi bi-instagram"></i></a></span>
+                  <span class="fs-ico m-2"><a href="https://www.tiktok.com/foryou" rel="noopener noreferrer"
+                      target="_blank"><i class="bi bi-tiktok"></i></a></span>
+                  <span class="fs-ico m-2"><a href="https://www.instagram.com/" rel="noopener noreferrer"
+                      target="_blank"><i class="bi bi-instagram"></i></a></span>
                   <span class="fs-ico m-2"><a
                       href="https://api.whatsapp.com/send/?phone=946726276&text&type=phone_number&app_absent=0"
                       target="_blank"><i class="bi bi-whatsapp"></i></a></span>
-                  <span class="fs-ico m-2"><a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"><i
-                        class="bi bi-facebook"></i></a></span>
+                  <span class="fs-ico m-2"><a href="https://www.facebook.com/" rel="noopener noreferrer"
+                      target="_blank"><i class="bi bi-facebook"></i></a></span>
                   <!-- <span class="fs-ico m-2"><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></span> -->
                 </div>
                 <span class="fw-bold">"Mi Negocio Innova"</span>
@@ -370,11 +371,13 @@
               <div class="col">
                 <div class="d-flex mb-3 link-wsap">
                   <span><i class="bi bi-telephone-fill"></i></span>
-                  <a href="https://api.whatsapp.com/send?phone=+51941211348&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n:" rel="noopener noreferrer" target="_blank" class="ms-3">(+51) 941211348</a>
+                  <a href="https://api.whatsapp.com/send?phone=+51941211348&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n:"
+                    rel="noopener noreferrer" target="_blank" class="ms-3">(+51) 941211348</a>
                 </div>
                 <div class="d-flex mb-3 link-wsap">
                   <span><i class="bi bi-telephone-fill"></i></span>
-                  <a  href="https://api.whatsapp.com/send?phone=+51946726276&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n:" rel="noopener noreferrer" target="_blank" class="ms-3">(+51) 946726276</a>
+                  <a href="https://api.whatsapp.com/send?phone=+51946726276&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n:"
+                    rel="noopener noreferrer" target="_blank" class="ms-3">(+51) 946726276</a>
                 </div>
                 <div class="d-flex mb-3">
                   <span><i class="bi bi-envelope-fill"></i></span>
@@ -403,8 +406,11 @@
           </div>
           <div class="col-lg-6">
             <div class="border border-2">
-              <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.3582971125555!2d-77.04747839678559!3d-12.082468882725816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f9bc068997%3A0x4d717341c3258a53!2sAv.%20San%20Felipe%201140%2C%20Jes%C3%BAs%20Mar%C3%ADa%2015072!5e0!3m2!1ses-419!2spe!4v1731002086693!5m2!1ses-419!2spe" style="border:0;" width="100%" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
+              <<iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.3582971125555!2d-77.04747839678559!3d-12.082468882725816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f9bc068997%3A0x4d717341c3258a53!2sAv.%20San%20Felipe%201140%2C%20Jes%C3%BAs%20Mar%C3%ADa%2015072!5e0!3m2!1ses-419!2spe!4v1731002086693!5m2!1ses-419!2spe"
+                style="border:0;" width="100%" height="350" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
           </div>
         </div>
