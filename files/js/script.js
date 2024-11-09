@@ -1,16 +1,168 @@
 /* Database */
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyCTMPRJcAp6RICj7GfVUJt4gXW8g-VGSc0",
-    authDomain: "wa-libro-reclamo-test.firebaseapp.com",
-    projectId: "wa-libro-reclamo-test",
-    storageBucket: "wa-libro-reclamo-test.appspot.com",
-    messagingSenderId: "93275745810",
-    appId: "1:93275745810:web:303d2225489fa69bf032cb"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
+    apiKey: "AIzaSyDdT-be-qONznIx2vQ1mfOQbM3wiU8hANo",
+    authDomain: "ws-epc-premiun.firebaseapp.com",
+    projectId: "ws-epc-premiun",
+    storageBucket: "ws-epc-premiun.firebasestorage.app",
+    messagingSenderId: "239112323567",
+    appId: "1:239112323567:web:85576bd8ce0ca53dd3f61a"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+/* =======================================SCRIPT PARA INDEX==================================== */
+document.addEventListener("DOMContentLoaded", function () {
+    // Inicializa el primer slider
+    const elemHeader = document.querySelector('.carousel-header');
+    if (elemHeader) {
+        new Flickity(elemHeader, {
+            cellAlign: 'center',
+            contain: true,
+            wrapAround: true,
+            autoPlay: 3000,
+            pageDots: false,
+            prevNextButtons: false
+        });
+    }
+
+    // Inicializa el segundo slider
+    const elemClientes = document.querySelector('.carousel-clientes');
+    if (elemClientes) {
+        new Flickity(elemClientes, {
+            cellAlign: 'center',
+            contain: true,
+            wrapAround: true,
+            autoPlay: 2500,
+            pageDots: false,
+            prevNextButtons: false
+        });
+    }
+
+    // Inicializa el tercer slider
+    const elemProveedores = document.querySelector('.carousel-proveedores');
+    if (elemClientes) {
+        new Flickity(elemProveedores, {
+            cellAlign: 'center',
+            contain: true,
+            wrapAround: true,
+            autoPlay: 2500,
+            pageDots: false,
+            prevNextButtons: false
+        });
+    }
+
+});
+
+/* Registro de formulario */
+function registrarMensaje() {
+    let nombreIndex = document.querySelector(".nombre-index");
+    let telefonoIndex = document.querySelector(".telefono-index");
+    let correoIndex = document.querySelector(".correo-index");
+    let ciudadIndex = document.querySelector(".ciudad-index");
+    let mensajeIndex = document.querySelector(".mensaje-index");
+    console.log("Entre a la función");
+    
+
+    if (telefonoIndex.value.length == 9) {
+        // Guardar en Firestore
+        alert("Éxito");
+        /* db.collection("mensajes").doc().set({
+            nombre: nombreIndex.value,
+            telefono: telefonoIndex.value,
+            correo: correoIndex.value,
+            ciudad: ciudadIndex.value,
+            mensaje: mensajeIndex.value,
+            fecha: new Date()
+        }).then(() => {
+            mostrarToast("Mensaje guardado en la base de datos", "bg-success", "text-white", "bottom-0 end-0");
+        }).catch((error) => {
+            mostrarToast("Error al guardar en la base de datos", "bg-danger",undefined, 8000);
+        }); */
+    } else {
+        mostrarToast("Ingrese un numero valido", "bg-warning", "text-white");
+    }
+
+}
+
+function mostrarToast(mensaje, color = "bg-white", textColor = "text-dark", posicion = "button-10 start-50 translate-middle", duracion = 1500, autohide = true) {
+    // Crear el contenedor del toast si no existe
+    let toastContainer = document.getElementById("dynamicToastContainer");
+    if (!toastContainer) {
+        toastContainer = document.createElement("div");
+        toastContainer.id = "dynamicToastContainer";
+        toastContainer.className = `toast-container position-fixed p-3 ${posicion}`;
+        document.body.appendChild(toastContainer);
+    }
+
+    // Crear el elemento del toast
+    const toastElement = document.createElement("div");
+    toastElement.className = `toast align-items-center ${color}`;
+    toastElement.setAttribute("role", "alert");
+    toastElement.setAttribute("aria-live", "assertive");
+    toastElement.setAttribute("aria-atomic", "true");
+
+    // Añadir el contenido del toast
+    toastElement.innerHTML = `
+        <div class="d-flex ${textColor}">
+            <div class="toast-body">
+                ${mensaje}
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    `;
+
+    // Agregar el toast al contenedor
+    toastContainer.appendChild(toastElement);
+
+    // Inicializar y mostrar el toast con opciones personalizadas
+    const toast = new bootstrap.Toast(toastElement, {
+        delay: duracion,
+        autohide: autohide
+    });
+
+    toast.show();
+
+    // Remover el toast del DOM una vez que se oculta
+    toastElement.addEventListener('hidden.bs.toast', () => {
+        toastElement.remove();
+    });
+}
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+    })
+})()
+
+/* =======================================SCRIPT PARA MENU DE OPCIONES ADMINISTRADOR ==================================== */
+document.addEventListener("DOMContentLoaded", function () {
+    let boton = document.querySelector("#menuBtn");
+    let menu = document.querySelector("#sideMenu");
+
+    boton.addEventListener('click', e=>{
+        menu.classList.toggle("menu-expandido");
+        menu.classList.toggle("menu-colapsado");
+
+        document.querySelector('body').classList.toggle('body-expandido');
+    });
+});
 
 function fecha(){
     let fecha_actual = document.querySelector("#fecha");
@@ -348,7 +500,7 @@ function login(){
                 });
             }else if (objeto.usuario == usuario && objeto.password == password) {
                 limpiarLogin();
-                window.location.href = "../admin.html"
+                window.location.href = "/files/pages/admin.html"
             }else{
                 swal.fire({
                     icon: "error",
@@ -364,5 +516,4 @@ function login(){
 function year() {
     
 }
-
 

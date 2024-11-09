@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://innova.pe/public_images/ico-logo-innova.ico" type="image/x-icon"/>
+    <title>Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/files/css/style.css">
+</head>
+<body>
+    <div id="bodyAdministrador">
+        <!-- Menu latral -->
+        <div id="sideMenu" class="menu-colapsado">
+            <!-- Hesder -->
+             <div id="cabecera">
+                <div id="titulo"><span>ADMINISTRADOR</span></div>
+                <div id="menuBtn">
+                    <div class="btn-hamburger"></div>
+                    <div class="btn-hamburger"></div>
+                    <div class="btn-hamburger"></div>
+                </div>
+             </div>
+             <!-- Perfil -->
+             <div id="perfil">
+                <div id="foto"><img src="/files/images/perfil.png" alt="" ></div>
+                <div id="nombre"><span>ROOT</span></div>
+            </div>
+            <!-- Items Menu -->
+            <div id="menuItems">
+                <div class="item">
+                    <a href="#" id="btnMenuInicio">
+                        <div class="icono"><img src="/files/images/mensajes.png" alt="" ></div>
+                        <div class="titulo"><span>Mensajes</span></div>
+                    </a>
+                </div>
+                <div class="item-separator">
+                </div>
+                <div class="item">
+                    <a href="#" id="btnMenuAsesoria">
+                        <div class="icono"><img src="/files/images/libro.png" alt="" ></div>
+                        <div class="titulo"><span>Libro reclamaciones</span></div>
+                    </a>
+                </div>
+                <div class="item-separator">
+                </div>
+                <div class="item">
+                    <a href="#" id="btnMenuIncidente">
+                        <div class="icono"><img src="/files/images/cofiguracion.png" alt="" ></div>
+                        <div class="titulo"><span>Configuración</span></div>
+                    </a>
+                </div>
+                <div class="item-separator">
+                </div>
+            </div>
+        </div>
+        <section id="headerAdministrador">
+            <div class="container">
+                <div class="espacio ">
+                    <div class="row d-flex align-items-center mt-2">
+                        <div class="col">
+                            <div class="">
+                                <img src="https://innova.pe/public_images/img-logo-innova.png" alt="" width="100px">
+                            </div>
+                            
+                        </div>
+                        <div class="col pt-2  text-end">
+                            <span class="fs-5"><a href="index.html"><i class="bi bi-box-arrow-left text-white"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Sección reactivo principal -->
+        <section id="contenedorPrincipal">
+            <div class="row">
+                <div class="col">
+                    <!-- Card reactivo -->
+                    <div id="cardReactivo">
+                        <div class="container">
+                            <div class="text-center">
+                                <h3 class="fw-bold">BANDEJA DE ENTRADA</h3>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col my-3 border border-2 rounded d-lg-flex justify-content-between">
+                                    <div class="d-flex flex-lg-column">
+                                        <span class="fw-bold">ID: &nbsp</span>
+                                        <span class="id-mensaje">1</span>
+                                    </div>
+                                    <div class="d-flex flex-lg-column">
+                                        <span class="fw-bold">Documento: &nbsp</span>
+                                        <span class="documento-mensaje">12345678</span>
+                                    </div>
+                                    <div class="d-flex flex-lg-column">
+                                        <span class="fw-bold">Nombre: &nbsp</span>
+                                        <span class="nombre-mensaje">Perez</span>
+                                    </div>
+                                    <div class="d-flex flex-lg-column">
+                                        <span class="fw-bold">Telefono: &nbsp</span>
+                                        <span class="telefono-mensaje">987654321</span>
+                                    </div>
+                                    <div class="d-flex flex-lg-column">
+                                        <span class="fw-bold">Correo: &nbsp</span>
+                                        <span class="correo-mensaje">perez@gmail.com</span>
+                                    </div>
+                                    <div class="d-flex flex-lg-column">
+                                        <span class="fw-bold">Ciudad: &nbsp</span>
+                                        <span class="ciudad-mensaje">Arequipa</span>
+                                    </div>
+                                    <div class="d-flex flex-lg-column">
+                                        <span class="fw-bold">Asunto: &nbsp</span>
+                                        <span class="asunto-mensaje">Informes</span>
+                                    </div>
+                                    <div class="text-center">
+                                        <span class="fw-bold">Opciones</span>
+                                        <div>
+                                            <span class="btn-ver-mensaje"><i class="bi bi-search"></i>&nbsp Ver</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Templates  -->
+                     
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <!-- Quejas y reclamos -->
+        <section id="historial">
+            <div class="container">
+                <div class="text-center">
+                    <h3 class="fw-bold">HISTORIAL DE QUEJAS/RECLAMOS</h3>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col my-3 border border-2 rounded d-lg-flex justify-content-between">
+                        <div class="d-flex flex-lg-column">
+                            <span class="fw-bold">ID: &nbsp</span>
+                            <span class="id-reclamo">1</span>
+                        </div>
+                        <div class="d-flex flex-lg-column">
+                            <span class="fw-bold">Fecha: &nbsp</span>
+                            <span class="fecha-reclamo">1</span>
+                        </div>
+                        <div class="d-flex flex-lg-column">
+                            <span class="fw-bold">RS/Nombres: &nbsp</span>
+                            <span class="id-mensaje">1</span>
+                        </div>
+                        <div class="d-flex flex-lg-column">
+                            <span class="fw-bold">N° Documento: &nbsp</span>
+                            <span class="id-mensaje">1</span>
+                        </div>
+                        <div class="d-flex flex-lg-column">
+                            <span class="fw-bold">Correo: &nbsp</span>
+                            <span class="id-mensaje">1</span>
+                        </div>
+                        <div class="d-flex flex-lg-column">
+                            <span class="fw-bold">Incidente: &nbsp</span>
+                            <span class="id-mensaje">1</span>
+                        </div>
+                        <div class="d-flex flex-lg-column">
+                            <span class="fw-bold">Opciones: &nbsp</span>
+                            <span class="id-mensaje">1</span>
+                        </div>
+
+
+
+
+                        <div class="table-responsive-sm">
+                            <table id="tableId" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Orden</th>
+                                        <th>Fecha</th>
+                                        <th>RS/Nombres</th>
+                                        <th>N° Documento</th>
+                                        <th>Correo</th>
+                                        <th>Tipo incidente</th>                                        
+                                        <th>Opciones</th>
+                                    </tr>                                        
+                                </thead>
+                                <tbody id="tabla_reclamo">
+                                    <!-- Se muestra el contenido de la tabla -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="modalView">
+
+                        </div>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="listaModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="listaModalLabel">DATOS GENERALES</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div id="contenido_modal" class="modal-body ">
+                                    <!-- Contenido de modal -->
+                                    
+                                    
+                                </div>
+                                <div id="contenedor_estado" class="container py-2">
+                                    <!-- Contenido de estado -->
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="estado_atencion">
+                                        <label class="form-check-label" for="estado">Estado de atención</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                    <button id="btn_guardar" type="button" class="btn btn-primary" onclick="editarReclamo()" data-bs-dismiss="modal">Guardar cambios</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="footer">
+            <div class="container">
+                <div class="espacio">
+                    <div class="row">
+                        <div class="col text-center pt-3">
+                            <span><a id="copyright" href="https://innova.pe/" target="_blank">© 2021 Innova Sistemas Integrales S.A.C.</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/files/js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        listarReclamo();
+        fecha();
+    </script>
+</body>
+</html>

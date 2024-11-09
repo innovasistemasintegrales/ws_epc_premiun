@@ -1,206 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/files/images/logoInnova.png" type="image/x-icon"/>
-    <title>especialista</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/files/images/isotipo-escon.png" type="image/x-icon" />
+  <title>ESCON</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="files/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="files/css/style.css">
+
+  <!-- slider auto -->
+  <link rel="stylesheet" href="/files/css/flickity.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div>
-        <section id="header">
-            <div class="container">
-                <div class="row d-flex align-items-center mt-2">
-                    <div class="col">
-                        <div>
-                            <img src="/files/images/logo-mi-negocio.png" alt="" width="120px" class="rounded">
-                        </div>
-                    </div>
-                    <div class="col text-end d-none d-lg-block d-md-block d-sm-none mt-2">
-                        <a href="https://tiendademo.innova.pe/" class="btn-tienda" target="_blank">Tienda Virtual</a>
-                        <a href="" class="btn-facturacion" data-bs-toggle="modal" data-bs-target="#modalInnovaNegocios">Facturación Electrónica</a>
-                    </div>
-                    <div class="col pt-2 pb-2 text-end d-lg-none d-md-none d-sm-block">
-                        <a class="btn-tienda"><i class="bi bi-cart3"></i></a>
-                        <a class="btn-facturacion"><i class="bi bi-pc-display"></i></a>
-                    </div>
-                </div>
+  <div>
+    <section id="header">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col mt-2">
+            <div>
+              <img src="/files/images/logo-escon-blanco.png" alt="" width="120px" class="rounded">
             </div>
-        </section>
-
-        <!-- Modal -->
-        <div class="modal fade" id="modalInnovaNegocios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Acceso a Innova Negocios</h5>
-                        <button type="  button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    <span>
-                        Estas a punto de ingresar al sistema de 
-                        facturación electrónica y control de 
-                        inventarios <b>INNOVA NEGOCIOS.</b></br>
-                        <b>Usuario: </b>ventas</br>
-                        <b>Contraseña:</b> 1234
-                    </span>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                        <a href="https://innovanegocios.pe/test/" class="btn btn-sm btn-primary" target="_blank">Continuar</a>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="col text-end d-none d-lg-block d-md-block d-sm-none mt-2">
+            <a href="https://tiendademo.innova.pe/" class="btn-tienda" target="_blank">Tienda Virtual</a>
+            <a href="" class="btn-facturacion" data-bs-toggle="modal" data-bs-target="#modalInnovaNegocios">Facturación
+              Electrónica</a>
+          </div>
+          <div class="col pt-2 pb-2 text-end d-lg-none d-md-none d-sm-block">
+            <a class="btn-tienda"><i class="bi bi-cart3"></i></a>
+            <a class="btn-facturacion"><i class="bi bi-pc-display"></i></a>
+          </div>
         </div>
-        <section id="body">
-            <section id="inicio">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <img src="/files/images/inicio.jpeg" alt="" width="100%">
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-            </section>
+      </div>
+    </section>
 
-            <section id="nosotros">
-                <div class="container">
-                    
-                    <div id="quienesSomos" class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <span class="fw-bold">QUIENES SOMOS</span>
-                            <p class="parrafo">
-                                Somos una empresa de tecnología integral dedicada a 
-                                ofrecer soluciones y herramientas informáticas, 
-                                administrativas y contables que optimizan la rentabilidad, 
-                                eficacia y eficiencia de los procesos de nuestros clientes.
-                            </p>
-                            <p class="parrafo">
-                                Desarrollamos sistemas y aplicaciones diseñados para el 
-                                registro de operaciones de empresas como comercios en general, 
-                                importadoras, restaurantes, clínicas estéticas, hoteles, saunas, 
-                                entre otros. Todos nuestros sistemas cuentan con una integración 
-                                opcional con nuestro sistema general de Facturación Electrónica, 
-                                validado por SUNAT.
-                            </p>
-                            <p class="parrafo">
-                                Nos comprometemos con el futuro, sin descuidar la importancia del presente. 
-                                Creemos en la innovación y la mejora continua, brindando lo mejor en cada proyecto.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 d-none d-lg-block d-md-block d-sm-none">
-                            <div>
-                                <img src="/files/images/nosotros.jpeg" alt="" width="100%" height="320px">
-                            </div>
-                        </div>
-                    </div>
-                    <div id="visionMision" class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div>
-                                <img src="/files/images/vision-mision.jpeg" alt="" width="100%" height="350px">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <span class="fw-bold">MISIÓN</span>
-                            <p class="parrafo">
-                                Nos dedicamos a proporcionar soluciones y herramientas tecnológicas 
-                                que optimizan los procesos administrativos, contables y operativos 
-                                de nuestros clientes. A través de un enfoque innovador y un profundo 
-                                conocimiento del sector. Desarrollamos sistemas y aplicaciones que 
-                                garantizan la alta rentabilidad, eficiencia y eficacia de las empresas, 
-                                siempre alineados con los estándares de calidad y las normativas vigentes.
-                            </p>
-                            <span class="fw-bold">VISIÓN</span>
-                            <p class="parrafo">
-                                Convertirnos en la empresa líder a nivel nacional dentro de 6 años en 
-                                soluciones tecnológicas integrales, reconocida por nuestra innovación, 
-                                excelencia en servicio al cliente y compromiso con la eficiencia. 
-                                Buscamos ser el referente de confianza para nuestros clientes y la sociedad, 
-                                impulsando el progreso de empresas en todos los sectores.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <section id="footer">
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col">
-                        <div class="row">
-                            <div class="col col-12 col-lg-6 text-center">
-                                <img src="/files/images/logo-mi-negocio.png" alt="" width="150px">
-                            </div>
-                            <div class="col-12 col-lg-6 text-center">
-                                <div class=" fw-bold">
-                                    <span>Nuestras redes sociales</span>
-                                </div>
-    
-                                <div class="py-1 pb-4">
-                                    <span class="fs-ico m-2"><a href="#" target="_blank"><i class="bi bi-tiktok"></i></a></span>
-                                    <span class="fs-ico m-2"><a href="#" target="_blank"><i class="bi bi-instagram"></i></a></span>
-                                    <span class="fs-ico m-2"><a href="https://api.whatsapp.com/send/?phone=979018820&text&type=phone_number&app_absent=0" target="_blank"><i class="bi bi-whatsapp"></i></a></span>
-                                    <span class="fs-ico m-2"><a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a></span>
-                                    <!-- <span class="fs-ico m-2"><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></span> -->
-                                </div>
-                                <span class="fw-bold">"Mi Negocio Innova"</span>
-                            </div>
-                        </div>
-                        <hr class="text-black">
-                        <div class="row">
-                            <div class="col">
-                                <div class="d-flex">
-                                    <span><i class="bi bi-telephone-fill"></i></span>
-                                    <p class="ms-3">(+51) 952322003</p>
-                                </div>
-                                <div class="d-flex">
-                                    <span><i class="bi bi-telephone-fill"></i></span>
-                                    <p class="ms-3">(+51) 930274447</p>
-                                </div>
-                                <div class="d-flex">
-                                    <span><i class="bi bi-telephone-fill"></i></span>
-                                    <p class="ms-3">(+51) 977738017</p>
-                                </div>
-                                <div class="d-flex">
-                                    <span><i class="bi bi-geo-alt-fill"></i></span>
-                                    <p class="ms-3">Calle Tumbes, Z-1, Rio Seco Cerro Colorado - Arequipa</p>
-                                </div>
-                                <hr class="text-black">
-                                <div class="text-center">
-                                    <a href="/libro.html" class="icono-libro">
-                                        <img src="/files/images/libroReclamaciones-black.png" alt="" width="100px">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="border border-2">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.4603342918076!2d-71.57399122379786!3d-16.35049623689634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x914249c5bc7c0b7d%3A0xab8065fc60a02100!2sInnova%20Sistemas%20Integrales%20S.A.C.!5e0!3m2!1ses-419!2spe!4v1728321529205!5m2!1ses-419!2spe" width="100%" height="350" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <hr class="text-black fw-bold">
-                <div class="row text-center">
-                    <div class="col">
-                        <span>© 2024 Mi Negocio Innova</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Modal -->
+    <div class="modal fade" id="modalInnovaNegocios" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Acceso a Innova Negocios</h5>
+            <button type="  button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span>
+              Estas a punto de ingresar al sistema de
+              facturación electrónica y control de
+              inventarios <b>INNOVA NEGOCIOS.</b></br>
+              <b>Usuario: </b>ventas</br>
+              <b>Contraseña:</b> 1234
+            </span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            <a href="https://innovanegocios.pe/test/" class="btn btn-sm btn-primary" target="_blank">Continuar</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="files/js/script.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <section id="body">
+      <section id="inicio">
+        <div class="content-relative">
+          <div class="carousel-header">
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/1.png" alt="Imagen 1">
+            </div>
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/2.png" alt="Imagen 2">
+            </div>
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/3.png" alt="Imagen 3">
+            </div>
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/4.png" alt="Imagen 4">
+            </div>
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/5.png" alt="Imagen 5">
+            </div>
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/6.png" alt="Imagen 6">
+            </div>
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/7.png" alt="Imagen 7">
+            </div>
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/8.png" alt="Imagen 8">
+            </div>
+            <div class="carousel-cell"><img src="/files/images/imagenes carousel de 1080 x 450/9.png" alt="Imagen 9">
+            </div>
+          </div>
+          <!-- Overlay con texto -->
+          <div class="carousel-overlay">
+            <div class="container-lg">
+              <h2 class="overlay-title">Protegiendo el Futuro con <span class="enfasis">INNOVACIÓN</span></h2>
+              <p class="overlay-subtitle">Soluciones de construcción y sistemas de seguridad contra incendios a la
+                medida
+                de tus necesidades</p>
+            </div>
+          </div>
+        </div>
+        <div class="resumen mx-auto">
+          <div class="card-resumen p-4 text-center d-flex flex-column align-items-center">
+            <p>CLIENTES</p>
+            <p class="num-resumen">198</p>
+            <p>Satisfechos</p>
+          </div>
+          <div class="card-resumen p-4 text-center d-flex flex-column align-items-center">
+            <p>INNOVACIÓN</p>
+            <p class="num-resumen">43</p>
+            <p>Satisfechos</p>
+          </div>
+          <div class="card-resumen p-4 text-center d-flex flex-column align-items-center">
+            <p>PROVEEDORES</p>
+            <p class="num-resumen">324</p>
+            <p>Satisfechos</p>
+          </div>
+          <div class="card-resumen p-4 text-center d-flex flex-column align-items-center">
+            <p>CRECIMIENTO</p>
+            <p class="num-resumen">100%</p>
+            <p>Satisfechos</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosotros">
+        <div class="container my-5">
+
+          <div id="quienesSomos" class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <span class="fw-bold">QUIENES SOMOS</span>
+              <p class="parrafo">
+                En [Nombre de la Empresa], nos dedicamos a ofrecer soluciones integrales en construcción civil, sistemas
+                contra incendios, y proyectos eléctricos de media y baja tensión. Con años de experiencia en el mercado,
+                brindamos servicios especializados en el diseño, instalación, supervisión y mantenimiento de
+                infraestructura crítica para empresas y entidades del sector público y privado.
+              </p>
+              <p class="parrafo">
+                Nuestro enfoque se centra en entregar proyectos de alta calidad, ajustados a las normativas de seguridad
+                y estándares internacionales. Contamos con un equipo de profesionales altamente calificados,
+                comprometidos con garantizar la seguridad y satisfacción de cada cliente.
+              </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 d-none d-lg-block d-md-block d-sm-none">
+              <div>
+                <img src="/files/images/2 imagenes nosotros 500x250/imagen-nosotros-1.png" alt="" width="100%"
+                  height="320px">
+              </div>
+            </div>
+          </div>
+          <div id="visionMision" class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div>
+                <img src="/files/images/2 imagenes nosotros 500x250/imagen-nosotros-2.png" alt="" width="100%"
+                  height="350px">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12  mt-3">
+              <span class="fw-bold">MISIÓN</span>
+              <p class="parrafo">
+                Nuestro compromiso es ejecutar proyectos de construcción civil, sistemas sanitarios y eléctricos que
+                abarquen desde el diseño y planificación hasta la instalación y mantenimiento, asegurando los más altos
+                estándares de calidad. Buscamos fomentar un entorno laboral positivo que motive el crecimiento personal
+                y profesional de nuestros colaboradores, generando valor a largo plazo para nuestros clientes y
+                contribuyendo al desarrollo sostenible de la industria.
+              </p>
+              <span class="fw-bold">VISIÓN</span>
+              <p class="parrafo">
+                Ser reconocidos como una empresa líder en el sector, elegida por nuestros diseños innovadores,
+                excelencia en ingeniería y calidad de nuestros servicios. Nos esforzamos por mantener un equipo técnico
+                de alto nivel y optimizar los costos sin comprometer la calidad, para superar las expectativas de
+                nuestros clientes y ser su primera opción en proyectos de construcción y sistemas contra incendios.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="principalesProductos" class="my-5">
+        <h2 class="text-center">Nuestros Principales Productos</h2>
+        <div class=" container-xl contenedor-productos mt-4">
+          <div class="product-card">
+            <div class="image-container">
+              <img src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set">
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="image-container">
+              <img src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set">
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="image-container">
+              <img src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set">
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="image-container">
+              <img src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set">
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="image-container">
+              <img src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set">
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="image-container">
+              <img src="https://retailwire.com/wp-content/uploads/zcdayrowlc0.jpg" alt="Morning Set">
+            </div>
+          </div>
+          
+        </div>
+
+      </section> -->
+
+      <section id="contactanos" class="container my-5">
+        <div class="card-contactanos row justify-content-center mx-2 mx-lg-0">
+          <h2 class="text-center mt-5">Contáctanos</h2>
+          <div class="col-md-12">
+            <div class="wrapper">
+              <div class="row no-gutters">
+                <div class="col-lg-6">
+                  <div class="contact-wrap w-100 p-md-5 p-4">
+
+                    <p class="parrafo mb-4"><strong>¿Tienes un proyecto en mente o necesitas más información sobre
+                        nuestros servicios?
+                        ¡Estamos aquí para ayudarte!</strong> Puedes comunicarte con nosotros a través del siguiente
+                      formulario y nuestro equipo de expertos responderá a la brevedad para atender tus consultas.</p>
+                    <div id="form-message-warning" class="mb-4"></div>
+                    <div id="form-message-success" class="mb-4 d-none">
+                      Tu mensaje fue envíado correctamente, ¡gracias!
+                    </div>
+
+                    <form id="contactForm" name="contactForm" class=" row r-3 needs-validation contactForm border border-3 py-4 rounded-3 justify-content-center" novalidate>
+                      <div class="row gap-3" >
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="text" class="form-control nombre-index" placeholder="Nombre" required>
+                            <div class="invalid-feedback">
+                              Ingrese su nombre.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="number" class="form-control telefono-index" placeholder="Teléfono" required>
+                            <div class="invalid-feedback">
+                              Ingrese su número telefónico.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="email" class="form-control correo-index" placeholder="Correo" required>
+                            <div class="invalid-feedback">
+                              Ingrese su correo.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <input type="text" class="form-control ciudad-index" placeholder="Ciudad" required>
+                            <div class="invalid-feedback">
+                              Ingrese su ciudad.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <textarea name="mensaje" class="form-control mensaje-index" id="mensaje" cols="30" rows="4" placeholder="Escribe Tu Mensaje Aquí" required></textarea>
+                            <div class="invalid-feedback">
+                              Escriba un mensaje.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group text-center">
+                            <button id="btnEnviarSms"  class="btn btn-enviar" onclick="registrarMensaje();">Enviar mensaje</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class=" col-lg-6 d-flex align-items-stretch p-4 p-md-5 mt--5 mt-lg-0">
+                  <div class="info-wrap w-100 p-5 img"
+                    style="background-image: url(/files/images/2\ imagenes\ nosotros\ 500x250/imagen-nosotros-1.png); background-size: cover; background-position: center; border-radius: 1rem;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clientes">
+        <h2 class="text-center">Nuestros Principales Clientes</h2>
+        <div class="carousel-clientes mb-5">
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-1.png"
+              alt="Imagen 1"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-2.png"
+              alt="Imagen 2"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-3.png"
+              alt="Imagen 3"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-4.png"
+              alt="Imagen 4"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-5.png"
+              alt="Imagen 5"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-6.png"
+              alt="Imagen 6"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-7.png"
+              alt="Imagen 7"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-8.png"
+              alt="Imagen 8"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-9.png"
+              alt="Imagen 9"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-10.png"
+              alt="Imagen 10"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-11.png"
+              alt="Imagen 11"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-12.png"
+              alt="Imagen 12"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-13.png"
+              alt="Imagen 13"></div>
+          <div class="carousel-cell border border-2 rounded-3"><img src="/files/images/logo de clientes 250x250/logo-de-clientes-14.png"
+              alt="Imagen 14"></div>
+        </div>
+      </section>
+
+      <section id="proveedores">
+        <h2 class="text-center mb-4">Nuestros Principales Proveedores</h2>
+        <div class="carousel-proveedores mb-5">
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/1.png" alt="Imagen 1"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/2.png" alt="Imagen 2"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/3.png" alt="Imagen 3"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/4.png" alt="Imagen 4"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/5.png" alt="Imagen 5"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/6.png" alt="Imagen 6"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/7.png" alt="Imagen 7"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/8.png" alt="Imagen 8"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/9.png" alt="Imagen 9"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/10.png" alt="Imagen 10"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/11.png" alt="Imagen 11"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/12.png" alt="Imagen 12"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/13.png" alt="Imagen 13"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/14.png" alt="Imagen 14"></div>
+          <div class="carousel-cell border border-2 rounded-pill"><img src="/files/images/logo proveedores 250x250/15.png" alt="Imagen 15"></div>
+        </div>
+      </section>
+    </section>
+    <section id="footer">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col col-12 col-lg-6 text-center">
+                <img src="/files/images/logo-escon-negro.png" alt="" width="150px">
+              </div>
+              <div class="col-12 col-lg-6 text-center">
+                <div class=" fw-bold">
+                  <span>Nuestras redes sociales</span>
+                </div>
+
+                <div class="py-1 pb-4">
+                  <span class="fs-ico m-2"><a href="https://www.tiktok.com/foryou" rel="noopener noreferrer" target="_blank"><i class="bi bi-tiktok"></i></a></span>
+                  <span class="fs-ico m-2"><a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"><i class="bi bi-instagram"></i></a></span>
+                  <span class="fs-ico m-2"><a
+                      href="https://api.whatsapp.com/send/?phone=946726276&text&type=phone_number&app_absent=0"
+                      target="_blank"><i class="bi bi-whatsapp"></i></a></span>
+                  <span class="fs-ico m-2"><a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"><i
+                        class="bi bi-facebook"></i></a></span>
+                  <!-- <span class="fs-ico m-2"><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></span> -->
+                </div>
+                <span class="fw-bold">"ESPECIALISTAS PARA LA CONSTRUCCION S.A.C."</span>
+              </div>
+            </div>
+            <hr class="text-black">
+            <div class="row">
+              <div class="col">
+                <div class="d-flex mb-3 link-wsap">
+                  <span><i class="bi bi-telephone-fill"></i></span>
+                  <a href="https://api.whatsapp.com/send?phone=+51941211348&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n:" rel="noopener noreferrer" target="_blank" class="ms-3">(+51) 941211348</a>
+                </div>
+                <div class="d-flex mb-3 link-wsap">
+                  <span><i class="bi bi-telephone-fill"></i></span>
+                  <a  href="https://api.whatsapp.com/send?phone=+51946726276&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n:" rel="noopener noreferrer" target="_blank" class="ms-3">(+51) 946726276</a>
+                </div>
+                <div class="d-flex mb-3">
+                  <span><i class="bi bi-envelope-fill"></i></span>
+                  <a href="mailto:administracion@escon.com.pe" class="ms-3">administracion@escon.com.pe</a>
+                </div>
+                <div class="d-flex">
+                  <span><i class="bi bi-geo-alt-fill"></i></span>
+                  <address class="ms-3">Av. San Felipe Km. 1140 Int. 1306 Res. San Felipe Lima - Lima - Jesus</address>
+                </div>
+                <hr class="text-black">
+                <div class="text-center">
+                  <a href="/files/pages/libro.html" class="icono-libro" aria-label="Acceder al libro de reclamaciones">
+                    <img src="/files/images/libroReclamaciones-black.png" alt="Libro de Reclamaciones" width="100px">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="border border-2">
+              <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.3582971125555!2d-77.04747839678559!3d-12.082468882725816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f9bc068997%3A0x4d717341c3258a53!2sAv.%20San%20Felipe%201140%2C%20Jes%C3%BAs%20Mar%C3%ADa%2015072!5e0!3m2!1ses-419!2spe!4v1731002086693!5m2!1ses-419!2spe" style="border:0;" width="100%" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>
+          </div>
+        </div>
+        <hr class="text-black fw-bold">
+        <div class="row text-center">
+          <div class="col">
+            <span>© 2024 - ESPECIALISTAS PARA LA CONSTRUCCION S.A.C.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="files/js/script.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/files/js/flickity.pkgd.min.js"></script>
 </body>
+
 </html>
